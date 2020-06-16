@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .focus{
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: scale(4.0);            
+        }
+
+        #teste{
+            padding: 0 40px;
+            display: flex;
+            height: 100vh;
+            background-color: rgb(249, 255, 255);
+            width: 100%;
+            transition: 0.5s;
+           
+        }
+
+        .item{
+            display: flex;
+            width: 250px;
+            height: 180px;
+            transition: 1s;
+        }
+
+        .item .foto{
+            width: 180px;
+            transition: 0.5s;
+        }
+
+        .item .foto img{
+            width: 100%;
+            background-color: white;
+        }
+
+        .item .info{
+            font-family: Arial, Helvetica, sans-serif;
+            display: none;
+            background-color: white;
+        }
+
+        .item .info p{
+            font-size: 7px;
+            padding: 20px 0;
+            
+        }
+
+     
+    
+    </style>
+
+</head>
+
+<body>
+
+        <div id="teste">
+            <div class="item">
+                <div class="foto">
+                    <img src="https://images.lojanike.com.br/1024x1024/produto/98930_773144_20190704150531.png">
+                </div>
+                <div class="info">
+                    <p>Homer Simpsons</p>
+                </div>
+            </div>
+        </div>
+
+
+    <script>
+        $(".item").on("click", function() {
+
+            $(".item").addClass('focus')
+            $("#teste").css("background-color","#000000d1")
+
+            .delay(500)
+            .queue(function (next) {
+                $(".item").css({"left":"40%"})  
+                $(".info").delay(1000).fadeIn()
+                
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#img1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    z-index: -50;
+    background-color: rgb(0, 0, 0);
+
+}
+
+#img1 img{
+    width: 100%;
+}
+
+#view {
+    margin: 0 auto;
+    max-width: 80%;
+    background-color: white;
+    margin-top: 19%;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.lista ul {
+
+    display: inline;
+}
+
+.lista{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.lista li { 
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    height: 360px;
+    width: 276px;
+    border-radius: 5px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    transition: ease-in 0.1s;
+}
+
+ul li{
+    display: inline;
+}
+
+.lista li:hover {
+  transform: scale(1.05);
+}
+
+.lista li #imgcard {
+    height: 240px;
+}
+
+.lista li img{
+    width: 100%;
+}
+
+.lista li p {
+ background-color: white;
+
+}
+
+.lista li p.info {
+    width: 100%;
+    min-height: 46px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.lista li p.valor {
+    margin: 5px;
+    background-color: white;
+}
+
+.valor{
+    margin: 5px;
+}
+
+.lista li button {
+    margin-right: 3px; 
+}
+
+.btn {
+    margin-top:5px; 
+    font-size: 1em;
+    padding: 10px 17px;
+    border: 0;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: ease .2s;
+}
+
+.btn:hover{
+    box-shadow: 0px 4px 4px gray;
+}
+
+.btn:active{
+    box-shadow: none;
+}
+
+.icon {
+    width: 40px;
+    cursor: pointer;
+}
+
+#carrinho {
+    display: none;
+    min-height: 700px;
+}
+
+#menu{
+    position: relative;
+    top: 0px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 300;
+}
+
+#menu img{
+    transition: 0.2s;
+    background-color: white;
+}
+
+#menu img:hover{
+    transform: scale(1.05);
+}
+
+#qtdCarrinho{
+    position: relative;
+    top: -53px;
+    right: -16px;
+    background-color: #fa4848;
+    width: 17px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 19px;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}        
+
+#listaCarrinho{
+    min-height: 820px;
+}
+
+.finalizado{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -250px; /* Negative half of width. */
+
+    background-color: white;
+    padding: 50px;
+    border: solid 1px #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 0px 1000px #0606069c;
+    padding: 20px 0;
+    z-index: 400;
+}
+
+@media(max-width: 800px){
+    .finalizado p{
+        font-size: 25px;
+    }
+}
+
+.valor{
+    display: flex;
+}
+
+.finalizado a{
+    margin-top: 2px;
+}
+
+#comprados{
+    width: 80%;
+    height: 100px;
+}
+
+button[value=finalizar]{
+    position: fixed;
+    bottom: 5%;
+    left: 10%;
+}
+
+.itemAdicionado{
+    border-radius: 5px;
+    border-left: solid 5px black;
+    width: 300px;
+    max-width: 80%;
+    background-color: white;
+    box-shadow: 11px 6px 8px 2px #0000001f;
+    min-height: 80px;
+    position: fixed;
+    bottom: 10%;
+    right: -350px;
+    padding: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ntInfo{
+    margin-top: 10px;
+}
+
+header{
+    height: 80px;
+}
+
+.fixed-menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed !important;
+    top: 5% !important;
+    right: 7% !important;
+}
+
+.fixed-menu img{
+    margin-bottom: 10px;
+}
+
+footer{
+    margin-top: 120px;
+    height: unset;
+    width: 100%;
+    
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding-bottom: 30px;
+
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#logo-footer{
+    height: 100px;
+}
